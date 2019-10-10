@@ -7,10 +7,23 @@ nav{
     align-items: center;
     width: 40%;
 
+    @media @phone{
+        max-width:500px;
+        width:100%;
+        justify-content: space-evenly;
+        margin-top:2%;
+        }
+
     a{
         color:@shark;
         text-decoration:none;
         font-size:2rem;
+
+        @media @phone{
+            max-width:500px;
+            margin: 0 1%;
+            font-size:1.2rem;
+            }
     }
     
 }
@@ -20,6 +33,15 @@ nav{
     flex-direction:row;
     justify-content:space-between;
     margin: 5% 0;
+
+    @media @phone{
+        flex-direction: column;
+        max-width: 500px;
+        width: fit-content;
+        align-items: center;
+        width: 100%;
+        margin: 5% 0 2%;
+        }
     
 }
 
@@ -29,5 +51,10 @@ nav{
     border-top: 2px dashed @navigation-border;
     width:120%;
     margin-left: -10%;
-    padding: 0 10%
+    padding: 0 10%;
+
+    @media @phone{
+        width:100%;
+        margin-left:0;
+        }
 }

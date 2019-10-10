@@ -131,6 +131,7 @@ table {
 }
 html {
   font-size: 62.5%;
+  align-content: center;
 }
 html,
 body {
@@ -146,9 +147,19 @@ h5 {
 h1 {
   font-size: 4rem;
 }
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+}
 h2 {
   font-size: 3.2rem;
   padding-bottom: 10px;
+}
+@media (max-width: 500px) {
+  h2 {
+    font-size: 2rem;
+  }
 }
 h4 {
   font-size: 2.5rem;
@@ -159,6 +170,12 @@ p {
   font-size: 1.6rem;
   padding-bottom: 10px;
 }
+@media (max-width: 500px) {
+  p {
+    line-height: 1.2;
+    font-size: 1.2rem;
+  }
+}
 img {
   max-width: 100%;
   height: auto;
@@ -167,12 +184,20 @@ img {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
-  align-items: center;
+}
+@media (max-width: 500px) {
+  .container {
+    width: fit-content;
+    max-width: 500px;
+  }
 }
 @media (max-width: 500px) {
   body {
     display: flex;
     flex-direction: column;
+    max-width: 500px;
+    padding: 2%;
+    margin: 1%;
   }
 }
 nav {
@@ -182,16 +207,41 @@ nav {
   align-items: center;
   width: 40%;
 }
+@media (max-width: 500px) {
+  nav {
+    max-width: 500px;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 2%;
+  }
+}
 nav a {
   color: #212529;
   text-decoration: none;
   font-size: 2rem;
+}
+@media (max-width: 500px) {
+  nav a {
+    max-width: 500px;
+    margin: 0 1%;
+    font-size: 1.2rem;
+  }
 }
 .headBox {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 5% 0;
+}
+@media (max-width: 500px) {
+  .headBox {
+    flex-direction: column;
+    max-width: 500px;
+    width: fit-content;
+    align-items: center;
+    width: 100%;
+    margin: 5% 0 2%;
+  }
 }
 .headBoxTwo {
   display: flex;
@@ -200,6 +250,12 @@ nav a {
   width: 120%;
   margin-left: -10%;
   padding: 0 10%;
+}
+@media (max-width: 500px) {
+  .headBoxTwo {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 .footer {
   width: 100%;
@@ -223,6 +279,7 @@ nav a {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding: 0 12%;
   }
 }
 .home .content-section .text-content {
@@ -287,9 +344,20 @@ nav a {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-pick {
+    padding: 5% 10% 0;
+    flex-direction: column;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 100%;
+  }
 }
 .home .content-pick .destination button {
   background-color: #17A2B8;
@@ -300,9 +368,22 @@ nav a {
   border-radius: 10px;
   font-size: 1.8rem;
 }
+@media (max-width: 500px) {
+  .home .content-pick .destination button {
+    width: 100%;
+    border-radius: 18px;
+  }
+}
 .home header {
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 500px) {
+  .home header {
+    max-width: 500px;
+    width: fit-content;
+    padding: 0 2%;
+  }
 }
 .home header .headerContent {
   padding: 5% 0;

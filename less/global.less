@@ -4,6 +4,7 @@
 
 html {
   font-size: 62.5%;
+  align-content:center;
 }
 
 html, body {
@@ -16,11 +17,19 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 4rem;
+
+  @media @phone{
+    font-size:2.4rem;
+  }
 }
 
 h2 {
   font-size: 3.2rem;
   padding-bottom: 10px;
+
+  @media @phone{
+    font-size:2rem
+  }
 }
 
 h4 {
@@ -32,6 +41,11 @@ p {
   line-height: 1.5;
   font-size: 1.6rem;
   padding-bottom: 10px;
+
+  @media @phone{
+    line-height:1.2;
+    font-size:1.2rem;
+  }
 }
 
 img {
@@ -43,12 +57,20 @@ img {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
-  align-items:center
+
+  @media @phone{
+    width:fit-content;
+    max-width:500px;
+  }
+  
 }
 
 body{
   @media @phone{
-  display:flex;
-  flex-direction:column;
-  }
+    display:flex;
+    flex-direction:column;
+    max-width:500px;
+    padding:2%;
+    margin: 1%;
+    }
 }
